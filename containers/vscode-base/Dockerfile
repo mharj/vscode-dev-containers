@@ -9,4 +9,5 @@ RUN apt-get update && \
     apt-get install -y git sudo curl apt-transport-https lsb-release ca-certificates unzip  && \
     groupadd --gid $USER_GID $USERNAME && \
     useradd --uid $USER_UID --gid $USER_GID -m $USERNAME && \
-    echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME
+    echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME && \
+    apt-get clean -y && rm -rf /var/lib/apt/lists/*
