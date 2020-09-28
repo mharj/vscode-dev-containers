@@ -1,6 +1,6 @@
 ARG VARIANT="focal"
 ARG NODE_VER=12
-FROM mharj-vscode-${VARIANT}-base
+FROM mharj/vscode-base
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y apache2 && \
