@@ -8,5 +8,6 @@ RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_${NODE_VER}.x | bash && \
     apt-get update && \
     apt-get install -y nodejs && \
+    usermod -a -G www-data vscode && \
     apt-get clean -y && rm -rf /var/lib/apt/lists/*
 COPY containers/vscode-apache-nodejs/000-default.conf /etc/apache2/sites-available/000-default.conf
