@@ -1,7 +1,7 @@
 FROM mharj/vscode-apache-nodejs
 ARG PHP_VER=7.4
 RUN apt-get update && \
-    apt-get install -y libmcrypt4 build-essential php-pear php-dev libmcrypt-dev php${PHP_VER} libapache2-mod-php${PHP_VER} php${PHP_VER}-opcache \
+    apt-get install -y composer libmcrypt4 build-essential php-pear php-dev libmcrypt-dev php${PHP_VER} libapache2-mod-php${PHP_VER} php${PHP_VER}-opcache \
     php${PHP_VER}-json php${PHP_VER}-mbstring php${PHP_VER}-xml php${PHP_VER}-pdo php${PHP_VER}-curl \
     php${PHP_VER}-json php${PHP_VER}-mysql php${PHP_VER}-intl php${PHP_VER}-zip php${PHP_VER}-gd && \
     pecl install mcrypt && \
