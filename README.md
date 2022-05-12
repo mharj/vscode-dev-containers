@@ -9,4 +9,6 @@ docker build -t mharj/vscode-php:php-7.1 -f containers/vscode-php/7.1/Dockerfile
 docker push mharj/vscode-php:php-7.1
 docker build -t mharj/vscode-php:php-7.4 -f containers/vscode-php/7.4/Dockerfile .
 docker push mharj/vscode-php:php-7.4
+docker build -t mharj/vscode-php:php-8.1 -f containers/vscode-php/8.1/Dockerfile .
+docker push mharj/vscode-php:php-8.1
 ```
