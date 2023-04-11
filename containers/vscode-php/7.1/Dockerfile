@@ -1,4 +1,5 @@
-FROM mharj/vscode-apache-nodejs
+ARG NODE_VERSION=latest
+FROM mharj/vscode-apache-nodejs:${NODE_VERSION}
 ARG PHP_VER=7.1
 RUN apt-get update && \
     add-apt-repository -y ppa:ondrej/php && \

@@ -1,4 +1,5 @@
-FROM mharj/vscode-apache-nodejs
+ARG NODE_VERSION=latest
+FROM mharj/vscode-apache-nodejs:${NODE_VERSION}
 ARG PHP_VER=7.4
 RUN apt-get update && \
     apt-get install -y composer mariadb-client libmcrypt4 build-essential php-pear php-dev libmcrypt-dev php${PHP_VER} libapache2-mod-php${PHP_VER} php${PHP_VER}-opcache \
