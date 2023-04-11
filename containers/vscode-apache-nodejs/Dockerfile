@@ -1,7 +1,7 @@
 ARG VARIANT="focal"
 FROM mharj/vscode-base
 ENV DEBIAN_FRONTEND=noninteractive
-ARG NODE_VER=14
+ARG NODE_VER=16
 RUN apt-get update && \
     apt-get install -y apache2 && \
     a2enmod rewrite && \
